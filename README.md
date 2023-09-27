@@ -6,6 +6,8 @@ input variables to identify the smallest set of predictors that minimize the pre
 variable, and then evaluate the unique contribution of each variable. Based on the concept of Granger causality, 
 the network obtained by EcohNet can be interpreted as representative of the causal relationships inherent in a 
 given time series.
+
+
 Reference: https://www.pnas.org/doi/10.1073/pnas.2204405119
 
 
@@ -33,6 +35,14 @@ require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
+
+Initially, the code executes echonet on _rdata_011322_2.csv_ in _data_ folder. To run it for your own data, the following steps are required:
+1) Place your data (csv) in the _data_ folder
+2) Open run_ecohnet.py and edit as follows
+```python
+data_path = DATA_DIR / "rdata_011322_2.csv"
+````
+
 
 ## Folder structure
 - `src/ecohnet`.
