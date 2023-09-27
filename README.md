@@ -16,12 +16,22 @@ Reference: https://www.pnas.org/doi/10.1073/pnas.2204405119
 
 ### Run
 
+#### On Google Colab
+See `ecohnet.ipynb`.
+
+#### On your environment
 ```` sh
 pipenv install
 pipenv shell
 $ python --version
 > Python 3.8.*
-python sctipts/ecohnet_with_kasmi.py
+python sctipts/run_ecohnet.py
+````
+
+```python
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
 ```
 
 ## Folder structure
