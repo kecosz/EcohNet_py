@@ -55,5 +55,5 @@ DATA_FILE = "YOURDATA.csv"
     - Exported mathematica colormaps. Used for visualization.
 
 - `scripts/`
-    - `run_ecohnet_with_kasmi.py`
-        - Script to run experiments on real data `rdata_011322_2.csv` from the console. Faster than running on a notebook.
+    - `run_ecohnet.py`
+        - Script to run experiments on csv data from the console. Faster than running on a notebook.
