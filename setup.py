@@ -1,6 +1,20 @@
 from os.path import join
+
+import numpy as np
+from Cython.Distutils import Extension, build_ext
 from setuptools import setup
 
+ext = Extension(
+    "ecohnet.utils.cy_reservoir",
+    sources=["src/ecohnet/utils/cy_reservoir.pyx"],
+    include_dirs=[".", np.get_include()],
+    library_dirs=[
+        join(np.get_include(), "..", "..", "random", "lib"),
+        join(np.get_include(), "..", "lib"),
+    ],
+    libraries=["npyrandom", "npymath"],
+    cython_directives={"language_level": "3"},
+)
 
 setup(
     name="EcohNet",
@@ -24,6 +38,8 @@ setup(
         "graphviz"
     ],
     zip_safe=False,
+    ext_modules=[ext],
+    cmdclass={"build_ext": build_ext},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
