@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/697528491.svg)](https://zenodo.org/badge/latestdoi/697528491)
+
 # Python version of EcohNet
 ## What
 EcohNet is a method for computing predictability-based relationships among variables in a multivariate time series.
