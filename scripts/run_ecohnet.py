@@ -10,7 +10,7 @@ from ecohnet import RCall
 from ecohnet.utils.preprocess import std
 import os
 
-REP = 10000
+REP = 100
 
 if not os.path.exists('out'):
     os.mkdir('out')
