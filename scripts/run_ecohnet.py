@@ -8,8 +8,13 @@ import datetime
 
 from ecohnet import RCall
 from ecohnet.utils.preprocess import std
+import os
 
 REP = 10000
+
+if not os.path.exists('out'):
+    os.mkdir('out')
+
 OUT_DIR = Path("out")
 DATA_DIR = Path("data")
 DATA_FILE = "rdata_011322_2.csv"
@@ -27,7 +32,6 @@ if __name__ == "__main__":
     pprint.pprint([f"{i} {col}" for i, col in enumerate(rdata.columns)])
 
     datk0 = rdata
-    print(datk0.head(4))
 
     datk = datk0.to_numpy() ** 0.5
 
