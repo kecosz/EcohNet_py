@@ -30,17 +30,11 @@ $ python --version
 python sctipts/run_ecohnet.py
 ````
 
-```python
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
 Initially, the code executes echonet on `rdata_011322_2.csv` in `data` folder. To run it for your own data, the following steps are required:
 1) Place your data (csv) in _data_ folder
 2) Open `run_ecohnet.py` and edit as follows
 ```python
-data_path = DATA_DIR / "_YOURDATA_.csv"
+data_path = DATA_DIR / "*YOURDATA*.csv"
 ````
 
 
