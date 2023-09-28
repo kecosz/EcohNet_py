@@ -34,7 +34,7 @@ Initially, the code executes echonet on `rdata_011322_2.csv` in `data` folder. T
 1) Place your data (csv file) in `data` folder
 2) Open `run_ecohnet.py` and edit as follows:
 ```python
-data_path = DATA_DIR / "YOURDATA.csv"
+DATA_FILE = "YOURDATA.csv"
 ````
 
 
