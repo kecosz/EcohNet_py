@@ -17,6 +17,7 @@ Reference: https://www.pnas.org/doi/10.1073/pnas.2204405119
 ### Prerequisits
 - Python 3.8
 - pipenv
+- numpy
 
 ### Run
 
