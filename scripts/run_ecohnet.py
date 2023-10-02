@@ -28,7 +28,7 @@ for key in options.keys():
             args[key[1:]] = True
             del sys.argv[idx]
 
-REP = args['rep']
+REP = int(args['rep'])
 ###############
 
 if not os.path.exists('out'):
