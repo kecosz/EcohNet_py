@@ -39,7 +39,7 @@ Initially, the code executes echonet on `rdata_011322_2.csv` in `data` folder. T
 ```python
 DATA_FILE = "YOURDATA.csv"
 ````
-
+See `ecohnet_script.ipynb` for an example of execution and visualization.
 
 ## Folder structure
 - `src/ecohnet`.
