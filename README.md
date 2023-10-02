@@ -35,7 +35,7 @@ python sctipts/run_ecohnet.py
 
 Initially, the code executes echonet on `rdata_011322_2.csv` in `data` folder. To run it for your own data, the following steps are required:
 1) Place your data (csv file) in `data` folder
-2) Open `run_ecohnet.py` and edit as follows:
+2) Edit `run_ecohnet.py` as follows:
 ```python
 DATA_FILE = "YOURDATA.csv"
 ````
