@@ -9,8 +9,10 @@ import datetime
 from ecohnet import RCall
 from ecohnet.utils.preprocess import std
 import os
+import sys
 
-REP = 100
+args = {'rep': 10000}
+REP = args['rep']
 
 if not os.path.exists('out'):
     os.mkdir('out')
