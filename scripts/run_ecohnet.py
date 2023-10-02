@@ -11,8 +11,23 @@ from ecohnet.utils.preprocess import std
 import os
 import sys
 
-args = {'rep': 10000}
-REP = args['rep']
+###############
+options = {'-rep': True}
+args = {'rep': '10000'}  # default
+
+for key in options.keys():
+    if key in sys.argv:
+        idx = sys.argv.index(key)
+        if options[key]:
+            value = sys.argv[idx+1]
+            if value.startswith('-'):
+                raise ValueError(f'option {key} must have a value.')
+            args[key[1:]] = value
+            del sys.argv[idx:idx+2]
+        else:
+            args[key[1:]] = True
+            del sys.argv[idx]
+###############
 
 if not os.path.exists('out'):
     os.mkdir('out')
