@@ -1707,7 +1707,7 @@
                 "sha256:98b1b2782e3c6c4904938b84c0eb932721069dfdb9134313beff7c83c2df24bf"
             ],
             "markers": "python_version >= '3.7' and python_version < '4'",
-            "version": "==2.31.1"
+            "version": "==2.31.0"
         },
         "tomli": {
             "hashes": [
