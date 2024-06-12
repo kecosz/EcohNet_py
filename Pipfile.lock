@@ -682,7 +682,7 @@
                 "sha256:fb5c1ad6bad98c57482236a21bf985ab0ef42bd51f7ad4e4538e89a997624e12"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==10.0.2"
+            "version": "==10.3.0"
         },
         "platformdirs": {
             "hashes": [
