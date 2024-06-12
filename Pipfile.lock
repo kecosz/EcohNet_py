@@ -952,7 +952,7 @@
                 "sha256:e5f923aa6a47e133d1cf87d60700889d7eae68988704e20c75fb2d65677a8e4b"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==6.2"
+            "version": "==6.4.1"
         },
         "tqdm": {
             "hashes": [
