@@ -248,7 +248,8 @@ def comp(
             pn = ilambda * (pn - np.outer(gn, xi) * pn)
             # state update
             xi = l1
-            wou = wou + (np.outer(gn, vn)).flatten()
+            npo = np.outer(gn, vn)
+            wou = wou# + (np.outer(gn, vn)).flatten()
     return yprds
 
 
@@ -312,7 +313,8 @@ def compd(
             pn = ilambda * (pn - np.outer(gn, xi) * pn)
             # state update
             xi = l1
-            wou = wou + (np.outer(gn, vn)).flatten()
+            npo = np.outer(gn, vn)
+            wou = wou# + (np.outer(gn, vn)).flatten()
     return yprds
 
 
@@ -362,5 +364,6 @@ def nu_compd(
             pn = ilambda * (pn - np.outer(gn, xi) * pn)
             # state update
             xi = l1
-            wou = wou + (np.outer(gn, vn)).flatten()
+            npo = np.outer(gn, vn)
+            wou = wou# + (np.outer(gn, vn)).flatten()
     return yprds
