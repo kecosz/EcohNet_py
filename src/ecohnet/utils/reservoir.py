@@ -240,15 +240,15 @@ def comp(
     for i in range(nt):
         l1 = np.tanh(win @ input[i] + ww @ xi)
         yprds[i] = wou @ l1
-		for _ in range(n_update):
-		    ouprd = wou @ l1
-		    vn = output - ouprd
-		    tmp = pn @ xi
-		    gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp))).reshape(-1, 1)
-		    pn = ilambda * (pn - (gn @ xi.reshape(1, -1)) * pn)
-		    # state update
-		    xi = l1
-		    wou = wou + gn @ vn.reshape(1, -1)
+        for _ in range(n_update):
+            ouprd = wou @ l1
+            vn = output[i] - ouprd
+            tmp = pn @ xi
+            gn = ilambda * tmp / (1 + ilambda * (xi @ tmp))
+            pn = ilambda * (pn - (gn @ xi) * pn)
+            # state update
+            xi = l1
+            wou = wou + gn * vn
     return yprds
 
 
@@ -306,13 +306,14 @@ def compd(
         yprds[i] = wou @ l1
         for _ in range(n_update):
             ouprd = wou @ l1
-            vn = output - ouprd
+            vn = oux - ouprd
+            # gn = ilambda * (pn @ xi) / (1 + ilambda * (xi @ pn) @ xi)
             tmp = pn @ xi
-            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp))).reshape(-1, 1)
-            pn = ilambda * (pn - (gn @ xi.reshape(1, -1)) * pn)
+            gn = ilambda * tmp / (1 + ilambda * (xi @ tmp))
+            pn = ilambda * (pn - (gn @ xi) * pn)
             # state update
             xi = l1
-            wou = wou + gn @ vn.reshape(1, -1)
+            wou = wou + gn * vn
     return yprds
 
 
