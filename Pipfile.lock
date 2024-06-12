@@ -209,7 +209,7 @@
                 "sha256:e2d9f10337c9e3b17f9bce17a60a16a885a7d23b59b7f45ce07ea643e5580439"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==4.39.2"
+            "version": "==4.43.0"
         },
         "graphviz": {
             "hashes": [
@@ -682,7 +682,7 @@
                 "sha256:fb5c1ad6bad98c57482236a21bf985ab0ef42bd51f7ad4e4538e89a997624e12"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==10.0.2"
+            "version": "==10.3.0"
         },
         "platformdirs": {
             "hashes": [
@@ -952,7 +952,7 @@
                 "sha256:e5f923aa6a47e133d1cf87d60700889d7eae68988704e20c75fb2d65677a8e4b"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==6.2"
+            "version": "==6.4.1"
         },
         "tqdm": {
             "hashes": [
@@ -1086,7 +1086,7 @@
                 "sha256:fe7ba4a51f33ab275515f66b0a236bcde4fb5561498fe8f898d4e549b2e4509f"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==3.8.4"
+            "version": "==3.9.4"
         },
         "aiosignal": {
             "hashes": [
@@ -1731,7 +1731,7 @@
                 "sha256:aa751d169e23c7479ce47a0cb0da579e3ede798f994f5816a74e4f4500dcea42"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'",
-            "version": "==1.26.15"
+            "version": "==1.26.18"
         },
         "wolframclient": {
             "hashes": [
