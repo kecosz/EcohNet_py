@@ -244,11 +244,11 @@ def comp(
             ouprd = wou @ l1
             vn = output - ouprd
             tmp = pn @ xi
-            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp)))
-            pn = ilambda * (pn - np.outer(gn, xi) * pn)
+            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp))).reshape(-1, 1)
+            pn = ilambda * (pn - (gn @ xi.reshape(1, -1)) * pn)
             # state update
             xi = l1
-            wou = wou + vn * gn
+            wou = wou + gn @ vn.reshape(1, -1)
     return yprds
 
 
@@ -308,11 +308,11 @@ def compd(
             ouprd = wou @ l1
             vn = output - ouprd
             tmp = pn @ xi
-            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp)))
-            pn = ilambda * (pn - np.outer(gn, xi) * pn)
+            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp))).reshape(-1, 1)
+            pn = ilambda * (pn - (gn @ xi.reshape(1, -1)) * pn)
             # state update
             xi = l1
-            wou = wou + vn * gn
+            wou = wou + gn @ vn.reshape(1, -1)
     return yprds
 
 
@@ -358,9 +358,9 @@ def nu_compd(
             ouprd = wou @ l1
             vn = output - ouprd
             tmp = pn @ xi
-            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp)))
-            pn = ilambda * (pn - np.outer(gn, xi) * pn)
+            gn = (ilambda * tmp / (1 + ilambda * (xi @ tmp))).reshape(-1, 1)
+            pn = ilambda * (pn - (gn @ xi.reshape(1, -1)) * pn)
             # state update
             xi = l1
-            wou = wou + vn * gn
+            wou = wou + gn @ vn.reshape(1, -1)
     return yprds
