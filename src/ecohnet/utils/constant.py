@@ -15,7 +15,7 @@ class Const:
     p4: int = PP[3]
     "Number of RLS update per one time step."
 
-    q1: int = 32
+    q1: int = 36
     "Number of recurrent nodes."
 
     q2: int = REP
