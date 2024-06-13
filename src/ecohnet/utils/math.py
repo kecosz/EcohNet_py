@@ -60,7 +60,7 @@ def Evp(
     Returns:
         [0] (float): median difference
         [1] (float):
-            area of ​​the region greater than the median of pa in
+            area of 窶銀逆he region greater than the median of pa in
             the probability distribution of pb
     """
     cdf_at_median_of_pa = np.interp(
@@ -88,8 +88,7 @@ def RMSE(target: np.ndarray, tgest: np.ndarray) -> float:
     diff = np.subtract(target, tgest)[-remaining_length:]
     rms = np.sqrt(np.mean((diff) ** 2))  # root mean square
     rho = np.exp(-rms)
-    epsilon = np.random.random() * (1e-8 - 1e-9) + 1e-9
-    return max(rho, epsilon)
+    return rho
 
 
 def BRMSE(target: np.ndarray, tgest: np.ndarray):
