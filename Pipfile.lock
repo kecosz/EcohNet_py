@@ -1149,7 +1149,7 @@
                 "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2023.7.22"
+            "version": "==2024.07.04"
         },
         "charset-normalizer": {
             "hashes": [
