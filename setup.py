@@ -18,7 +18,7 @@ ext = Extension(
 
 setup(
     name="EcohNet",
-    version="0.12",
+    version="0.15",
     description="Python implementation of EcohNet: timeseries-based causal inference using echo state network",
     author="ayabe fumihiko, kenta suzuki",
     author_email="ayabe.fumihiko@plus-zero.co.jp, kenta.suzuki.zk@riken.jp",
@@ -28,7 +28,7 @@ setup(
     install_requires=[
         "dill",
         "tqdm",
-        "numpy",
+        "numpy==1.24.0",
         "numba",
         "cython",
         "scipy",
