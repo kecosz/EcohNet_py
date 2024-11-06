@@ -28,11 +28,11 @@ setup(
     install_requires=[
         "dill",
         "tqdm",
-        "numpy==1.24.0",
+        "numpy",
         "numba",
         "cython",
         "scipy",
-        "statsmodels",
+        "statsmodels==0.13.5",
         "matplotlib",
         "seaborn",
         "graphviz"
