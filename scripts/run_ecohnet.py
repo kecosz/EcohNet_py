@@ -12,23 +12,27 @@ import os
 import sys
 
 ###############
-options = {'-rep': True}
-args = {'rep': '10000'}  # default
+# Define options and defaults
+options = {'-rep': True, '-seed': True}  # Options that expect a value
+args = {'rep': '10000', 'seed': '1'}  # Default values
 
+# Parse command-line arguments
 for key in options.keys():
     if key in sys.argv:
         idx = sys.argv.index(key)
-        if options[key]:
-            value = sys.argv[idx+1]
+        if options[key]:  # If the option expects a value
+            value = sys.argv[idx + 1]
             if value.startswith('-'):
                 raise ValueError(f'option {key} must have a value.')
             args[key[1:]] = value
-            del sys.argv[idx:idx+2]
-        else:
+            del sys.argv[idx:idx + 2]
+        else:  # If the option does not expect a value
             args[key[1:]] = True
             del sys.argv[idx]
 
+# Convert rep and seed to integers
 REP = int(args['rep'])
+SEED = int(args['seed'])
 ###############
 
 if not os.path.exists('out'):
@@ -59,7 +63,7 @@ if __name__ == "__main__":
     assert not out_fpath.exists()
 
     tu = time.time()
-    rcc, rcprd, rcmat, rw = RCall(std(datk), (0.95, 0.95, 0.001, 8), seed=42, rep=REP)
+    rcc, rcprd, rcmat, rw = RCall(std(datk), (0.95, 0.95, 0.001, 8), seed=SEED, rep=REP)
     rcall = (rcc, rcprd, rcmat, rw, datk)
 
     print(f"elapsed time of RCall: {time.time() - tu}")
