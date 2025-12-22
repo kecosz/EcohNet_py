@@ -28,7 +28,7 @@ setup(
     install_requires=[
         "dill",
         "tqdm",
-        "numpy==1.24.0",
+        "numpy==1.23.5",
         "numba",
         "cython",
         "scipy",
